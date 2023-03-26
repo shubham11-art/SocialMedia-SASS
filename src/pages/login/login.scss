@@ -1,0 +1,90 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(159, 84, 159, 0.689);
+  .card {
+    display: flex;
+    // card screen chya center la ghyayach hot so hi width dili aahe.
+    width: 50%;
+    background-color: #fff;
+    border-radius: 10px;
+    min-height: 600px;
+    // Image overflow zalyamule border disat navhati so card var overflow zalyamule card la overflow:hidden; apply keli
+    overflow: hidden;
+    .left {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      // elements/content madhe gap padanyasathi.
+      gap: 30px;
+      // linear-gradient ne background effect yenar je don color detoy tya combination madhe, ani opacity add keli tar backround image disel with color effect.
+      background: linear-gradient(
+          rgba(151, 57, 57, 0.614),
+          rgba(179, 87, 87, 0.463)
+        ),
+        url("https://picsum.photos/379/600"), center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      h1 {
+        font-size: 100px;
+        line-height: 90px;
+      }
+      p {
+        font-family: "Lora", serif;
+      }
+      span {
+        font-size: 16px;
+      }
+      button {
+        background-color: #fff;
+        color: rebeccapurple;
+        font-size: 12px;
+        font-weight: bold;
+        width: 50%;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+      }
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // Padding and Gap same kela donhi box cha.
+      padding: 50px;
+      gap: 30px;
+      h1 {
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 10px 5px;
+          font-family: "Varela Round", sans-serif;
+
+          &:focus {
+            outline-color: rgb(160, 47, 160);
+          }
+        }
+        button {
+          color: #fff;
+          background-color: rebeccapurple;
+          font-size: 12px;
+          font-weight: bold;
+          width: 50%;
+          padding: 10px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// Layich Bhari - aadhi .navbar la display: flex;nantar .left cha display: flex; nantar .search cha display: flex; tyanantar kalal ki .search madhe elements center la nahiye so .search la align-items: center; kel, nantar .left la align-items: center; ani nantar .navbar la align-items: center; i.e styling kartana kas aapan ek ek element target kartoy.
+
+.navbar {
+  // yatil properties 2 element var apply hotil .left and .right
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  position: sticky;
+  top: 0px;
+  // position: sticky; top: 0px; deun suddha navbar transperant hota so khalchi property apply keli.
+  background-color: #fff;
+  // z-index dila karan, stories.js ani Post.js overflow karat hoti.
+  z-index: 999;
+  .left {
+    // yatil properties 5 element var apply hotil span, 3 Icons, 1 div
+    display: flex;
+    align-items: center;
+    // flex chi ethe garaj nahi karan without flex pan aapan elements handle karu shakato
+    // flex: 1;
+    // background-color: lightgray;
+    gap: 30px;
+    cursor: pointer;
+
+    span {
+      font-size: 20px;
+      font-weight: bold;
+      color: blue;
+    }
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: 1px solid lightgray;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      input {
+        border: none;
+        width: 500px;
+        height: 10px;
+        padding: 10px;
+        &:focus {
+          outline-color: rebeccapurple;
+        }
+
+        @media only screen and (max-width: 480px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .right {
+    // yatil properties 4 element var apply hotil 3 Icons and 1 div
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    // flex: 1;
+
+    @media only screen and (max-width: 480px) {
+      display: none;
+    }
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      span {
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.rightbar {
+  flex: 3;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  background-color: rgba(211, 211, 211, 0.269);
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    .item {
+      background-color: #fff;
+      padding: 10px;
+      margin: 8px 0px;
+      -webkit-box-shadow: 0px 2px 3px 2px rgba(91, 92, 92, 0.76);
+      -moz-box-shadow: 0px 2px 3px 2px rgba(91, 92, 92, 0.76);
+      box-shadow: 0px 2px 3px 2px rgba(91, 92, 92, 0.76);
+      span {
+        color: gray;
+      }
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+        .userInfo {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          // Online friends chya dot satho position: relative; keli aahe
+          position: relative;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .online {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: lime;
+            position: absolute;
+            top: 0;
+            left: 22px;
+          }
+
+          p {
+            color: gray;
+            font-size: 13px;
+          }
+          span {
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+          }
+        }
+        span {
+          color: gray;
+          font-size: 13px;
+        }
+      }
+      .buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        // className cha child nasato tar tag cha asto mhanun .buttons chya child la nahi tar button chya child la apply kel aahe.
+        button {
+          border: none;
+          padding: 5px;
+          color: white;
+          cursor: pointer;
+          &:first-child {
+            background-color: rgb(55, 55, 188);
+          }
+          &:last-child {
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+}

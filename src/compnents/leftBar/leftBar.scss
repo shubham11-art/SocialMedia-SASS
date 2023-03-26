@@ -1,0 +1,60 @@
+.leftbar {
+  flex: 2;
+  // Leftbar fixed karnyasathi khupach mashakkaat aahe
+  position: sticky;
+  top: 70px;
+  // top:70px dil karan navbar chi height + padding = 70px
+  // height dili karan tyashivay to fix hot navhata
+  height: calc(100vh - 70px);
+  // jar elements jast astil tar to overflow hot hota so overflow: scroll; kela but yuamule ugly scrollbar yet hota so webkit use karun scrollbar xha display:none; kela.
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  // background-color: rgb(167, 67, 67);
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
+
+  .container {
+    padding: 15px;
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        span {
+          font-size: 14px;
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+    hr {
+      margin: 15px 0;
+      background-color: lightgray;
+      width: 60%;
+      border: none;
+      height: 0.5px;
+    }
+  }
+}
